@@ -1,0 +1,4 @@
+json.array!(@listings) do |listing|
+  json.extract! listing, :id, :user_id, :address, :hometype, :roomtype, :number_of_beds, :bedtype, :listing_name, :summary, :country, :city, :address2, :state, :zipcode, :essentials, :tv, :cabletv, :aircond, :heating, :kitchen, :internet, :wireless, :anytime, :hottub, :washer, :pool, :dryer, :breakfast, :freeparking, :gym, :elevator, :fireplace, :intercom, :doorman, :shampoo, :hangers, :hairdryer, :iron, :laptopfriendly, :familyfriendly, :smoking, :events, :petsin, :wheelchair, :smokedetector, :carbonmonoxide_detector, :firstaid, :safetycard, :extinguisher, :extinguisher_location, :fire_alarm_location, :gas_shut_off_location, :emergency_exit, :emergency_phone, :the_space, :guest_access, :interactions, :other_things, :houserules, :neighbour_overview, :neighbour_getting_around, :current, :booking_mode, :available_mode, :number, :price
+  json.url listing_url(listing, format: :json)
+end

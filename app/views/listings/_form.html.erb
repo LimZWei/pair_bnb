@@ -1,0 +1,277 @@
+<%= form_for(@listing) do |f| %>
+  <% if @listing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
+
+      <ul>
+      <% @listing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :hometype %><br>
+    <%= f.text_field :hometype %>
+  </div>
+  <div class="field">
+    <%= f.label :roomtype %><br>
+    <%= f.text_field :roomtype %>
+  </div>
+  <div class="field">
+    <%= f.label :number_of_beds %><br>
+    <%= f.text_field :number_of_beds %>
+  </div>
+  <div class="field">
+    <%= f.label :bedtype %><br>
+    <%= f.text_field :bedtype %>
+  </div>
+  <div class="field">
+    <%= f.label :listing_name %><br>
+    <%= f.text_field :listing_name %>
+  </div>
+  <div class="field">
+    <%= f.label :summary %><br>
+    <%= f.text_area :summary %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :address2 %><br>
+    <%= f.text_field :address2 %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :zipcode %><br>
+    <%= f.text_field :zipcode %>
+  </div>
+  <div class="field">
+    <%= f.label :essentials %><br>
+    <%= f.check_box :essentials %>
+  </div>
+  <div class="field">
+    <%= f.label :tv %><br>
+    <%= f.check_box :tv %>
+  </div>
+  <div class="field">
+    <%= f.label :cabletv %><br>
+    <%= f.check_box :cabletv %>
+  </div>
+  <div class="field">
+    <%= f.label :aircond %><br>
+    <%= f.check_box :aircond %>
+  </div>
+  <div class="field">
+    <%= f.label :heating %><br>
+    <%= f.check_box :heating %>
+  </div>
+  <div class="field">
+    <%= f.label :kitchen %><br>
+    <%= f.check_box :kitchen %>
+  </div>
+  <div class="field">
+    <%= f.label :internet %><br>
+    <%= f.check_box :internet %>
+  </div>
+  <div class="field">
+    <%= f.label :wireless %><br>
+    <%= f.check_box :wireless %>
+  </div>
+  <div class="field">
+    <%= f.label :anytime %><br>
+    <%= f.check_box :anytime %>
+  </div>
+  <div class="field">
+    <%= f.label :hottub %><br>
+    <%= f.check_box :hottub %>
+  </div>
+  <div class="field">
+    <%= f.label :washer %><br>
+    <%= f.check_box :washer %>
+  </div>
+  <div class="field">
+    <%= f.label :pool %><br>
+    <%= f.check_box :pool %>
+  </div>
+  <div class="field">
+    <%= f.label :dryer %><br>
+    <%= f.check_box :dryer %>
+  </div>
+  <div class="field">
+    <%= f.label :breakfast %><br>
+    <%= f.check_box :breakfast %>
+  </div>
+  <div class="field">
+    <%= f.label :freeparking %><br>
+    <%= f.check_box :freeparking %>
+  </div>
+  <div class="field">
+    <%= f.label :gym %><br>
+    <%= f.check_box :gym %>
+  </div>
+  <div class="field">
+    <%= f.label :elevator %><br>
+    <%= f.check_box :elevator %>
+  </div>
+  <div class="field">
+    <%= f.label :fireplace %><br>
+    <%= f.check_box :fireplace %>
+  </div>
+  <div class="field">
+    <%= f.label :intercom %><br>
+    <%= f.check_box :intercom %>
+  </div>
+  <div class="field">
+    <%= f.label :doorman %><br>
+    <%= f.check_box :doorman %>
+  </div>
+  <div class="field">
+    <%= f.label :shampoo %><br>
+    <%= f.check_box :shampoo %>
+  </div>
+  <div class="field">
+    <%= f.label :hangers %><br>
+    <%= f.check_box :hangers %>
+  </div>
+  <div class="field">
+    <%= f.label :hairdryer %><br>
+    <%= f.check_box :hairdryer %>
+  </div>
+  <div class="field">
+    <%= f.label :iron %><br>
+    <%= f.check_box :iron %>
+  </div>
+  <div class="field">
+    <%= f.label :laptopfriendly %><br>
+    <%= f.check_box :laptopfriendly %>
+  </div>
+  <div class="field">
+    <%= f.label :familyfriendly %><br>
+    <%= f.check_box :familyfriendly %>
+  </div>
+  <div class="field">
+    <%= f.label :smoking %><br>
+    <%= f.check_box :smoking %>
+  </div>
+  <div class="field">
+    <%= f.label :events %><br>
+    <%= f.check_box :events %>
+  </div>
+  <div class="field">
+    <%= f.label :petsin %><br>
+    <%= f.check_box :petsin %>
+  </div>
+  <div class="field">
+    <%= f.label :wheelchair %><br>
+    <%= f.check_box :wheelchair %>
+  </div>
+  <div class="field">
+    <%= f.label :smokedetector %><br>
+    <%= f.check_box :smokedetector %>
+  </div>
+  <div class="field">
+    <%= f.label :carbonmonoxide_detector %><br>
+    <%= f.check_box :carbonmonoxide_detector %>
+  </div>
+  <div class="field">
+    <%= f.label :firstaid %><br>
+    <%= f.check_box :firstaid %>
+  </div>
+  <div class="field">
+    <%= f.label :safetycard %><br>
+    <%= f.check_box :safetycard %>
+  </div>
+  <div class="field">
+    <%= f.label :extinguisher %><br>
+    <%= f.check_box :extinguisher %>
+  </div>
+  <div class="field">
+    <%= f.label :extinguisher_location %><br>
+    <%= f.text_field :extinguisher_location %>
+  </div>
+  <div class="field">
+    <%= f.label :fire_alarm_location %><br>
+    <%= f.text_field :fire_alarm_location %>
+  </div>
+  <div class="field">
+    <%= f.label :gas_shut_off_location %><br>
+    <%= f.text_field :gas_shut_off_location %>
+  </div>
+  <div class="field">
+    <%= f.label :emergency_exit %><br>
+    <%= f.text_area :emergency_exit %>
+  </div>
+  <div class="field">
+    <%= f.label :emergency_phone %><br>
+    <%= f.text_field :emergency_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :the_space %><br>
+    <%= f.text_field :the_space %>
+  </div>
+  <div class="field">
+    <%= f.label :guest_access %><br>
+    <%= f.text_field :guest_access %>
+  </div>
+  <div class="field">
+    <%= f.label :interactions %><br>
+    <%= f.text_field :interactions %>
+  </div>
+  <div class="field">
+    <%= f.label :other_things %><br>
+    <%= f.text_field :other_things %>
+  </div>
+  <div class="field">
+    <%= f.label :houserules %><br>
+    <%= f.text_field :houserules %>
+  </div>
+  <div class="field">
+    <%= f.label :neighbour_overview %><br>
+    <%= f.text_field :neighbour_overview %>
+  </div>
+  <div class="field">
+    <%= f.label :neighbour_getting_around %><br>
+    <%= f.text_field :neighbour_getting_around %>
+  </div>
+  <div class="field">
+    <%= f.label :current %><br>
+    <%= f.text_field :current %>
+  </div>
+  <div class="field">
+    <%= f.label :booking_mode %><br>
+    <%= f.check_box :booking_mode %>
+  </div>
+  <div class="field">
+    <%= f.label :available_mode %><br>
+    <%= f.check_box :available_mode %>
+  </div>
+  <div class="field">
+    <%= f.label :number %><br>
+    <%= f.text_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.number_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
